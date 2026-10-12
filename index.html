@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Notre mariage laïque</title>
+<meta name="description" content="Lucie &amp; Marion vous convient à leur mariage de conte de fées.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E👑%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FFF4C9;--red:#AE132F;--pink:#FF76DD;--orange:#FF891A;--blue:#7ABEEF;
+--bg:#FFF4C9;--ink:#3a0f18;--card:#fffaf0;--line:#AE132F;--head:#AE132F;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a0c16;--ink:#FFF4C9;--card:#3b1220;--line:#FF76DD;--head:#FF76DD}}
+:root[data-theme="dark"]{--bg:#2a0c16;--ink:#FFF4C9;--card:#3b1220;--line:#FF76DD;--head:#FF76DD}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:radial-gradient(circle at 12% 0,#FF76DD45,transparent 45%),radial-gradient(circle at 92% 18%,#7ABEEF45,transparent 42%),radial-gradient(circle,#FF76DD33 1.5px,transparent 2px) 0 0/28px 28px,var(--bg);color:var(--ink);font:1.15rem/1.65 'EB Garamond',Georgia,serif;overflow-x:hidden}
+.frise{height:14px;background:repeating-linear-gradient(90deg,var(--red) 0 24px,var(--pink) 24px 48px,var(--orange) 48px 72px,var(--blue) 72px 96px)}
+main{max-width:640px;margin:0 auto;padding:1.2rem 1rem 6rem}
+.folio{position:relative;background:var(--card);border:3px solid var(--line);border-radius:18px 4px 18px 4px;padding:1.6rem 1.3rem;margin:1.6rem 0;box-shadow:inset 0 0 0 6px var(--card),inset 0 0 0 8px var(--orange)}
+h1,h2,h3{font-family:'UnifrakturCook','Times New Roman',serif;font-weight:700;color:var(--head);margin:0;line-height:1.1}
+h1{font-size:clamp(2.6rem,12vw,4.2rem);text-align:center;text-shadow:3px 3px 0 var(--blue)}
+h2{font-size:2rem;text-align:center;margin-bottom:1rem}
+h2::before{content:"✧ ❦ ";color:var(--orange)}h2::after{content:" ❦ ✧";color:var(--orange)}
+h3{font-size:1.45rem}
+.sub{text-align:center;font-style:italic;font-size:1.25rem;margin:.6rem 0 1rem}
+.sep{text-align:center;color:var(--orange);letter-spacing:.6em;margin:.4rem 0}
+.crits{display:flex;justify-content:center;flex-wrap:wrap;gap:.3rem;margin:.6rem 0}
+.crit{background:none;border:0;font-size:2.2rem;cursor:pointer;padding:.2rem .35rem;border-radius:12px}
+.crit.hop{animation:hop .6s ease}
+@keyframes hop{30%{transform:translateY(-22px) rotate(-12deg)}60%{transform:translateY(0) rotate(8deg)}80%{transform:translateY(-6px)}}
+.sealwrap{text-align:center;margin:1rem 0 .4rem}
+.seal{width:112px;height:112px;border:0;border-radius:50% 46% 52% 48%;background:radial-gradient(circle at 35% 30%,#d6304d,var(--red) 60%,#7d0c20);color:#ffd6f4;font:700 2.6rem 'UnifrakturCook',serif;box-shadow:0 6px 0 #6d0a1b,0 12px 20px #0004;cursor:pointer;animation:wob 3s ease-in-out infinite}
+.seal.broken{animation:crack .6s forwards}
+@keyframes wob{0%,100%{transform:rotate(-4deg) scale(1)}50%{transform:rotate(4deg) scale(1.07)}}
+@keyframes crack{50%{transform:scale(1.25) rotate(-20deg)}to{transform:scale(0) rotate(50deg);opacity:0}}
+#hint{text-align:center;font-style:italic;margin:.6rem 0 0}
+.unroll{display:grid;grid-template-rows:0fr;transition:grid-template-rows .9s ease}
+.unroll.open{grid-template-rows:1fr}
+.unroll>div{overflow:hidden}
+.unroll .in{padding-top:1rem}
+.lettrine::first-letter{float:left;font-family:'UnifrakturCook',serif;font-size:4.4rem;line-height:.85;padding:.12em .16em 0;margin:.06em .14em 0 0;color:var(--cream);background:linear-gradient(135deg,var(--red),var(--pink));border:3px double var(--orange);border-radius:6px}
+.when{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.2rem}
+.when div{flex:1 1 200px;text-align:center;border:2px dashed var(--line);border-radius:12px;padding:.6rem}
+.when b{display:block;font-family:'UnifrakturCook',serif;font-size:1.4rem;color:var(--head)}
+ol.time{list-style:none;margin:0;padding:0 0 0 1.6rem;border-left:3px dotted var(--orange)}
+ol.time li{position:relative;margin:0 0 1.2rem}
+ol.time li::before{content:"✦";position:absolute;left:-2.35rem;top:-.1rem;width:1.5rem;text-align:center;background:var(--card);color:var(--pink);font-size:1.4rem}
+ol.time p,.folio p{margin:.2rem 0}
+.btn{display:inline-block;padding:.7em 1.3em;margin:.3rem .3rem .3rem 0;border-radius:999px 14px 999px 14px;background:var(--red);color:var(--cream);text-decoration:none;font:600 1.05rem 'EB Garamond',Georgia,serif;border:2px solid var(--orange);box-shadow:0 4px 0 #6d0a1b;cursor:pointer;transition:transform .15s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #6d0a1b}
+.btn.alt{background:var(--blue);color:#12233f;box-shadow:0 4px 0 #3b79b0}
+.btn:focus-visible,.crit:focus-visible,.sw:focus-visible,.seal:focus-visible,#mush:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.sws{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin:.8rem 0}
+.sw{width:54px;height:54px;border-radius:50% 44% 50% 46%;border:3px solid var(--card);box-shadow:0 0 0 2px var(--line);cursor:pointer}
+.sw.wig{animation:hop .6s ease}
+#swmsg,#titre{text-align:center;min-height:1.7em;font-style:italic;margin:.4rem 0}
+#titre{font-family:'UnifrakturCook',serif;font-style:normal;font-size:1.6rem;color:var(--head)}
+footer{text-align:center;padding:0 1rem 2rem;font-style:italic}
+#mush{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:50;width:62px;height:62px;border-radius:50%;border:3px solid var(--orange);background:var(--card);font-size:2rem;cursor:pointer;box-shadow:0 4px 12px #0004}
+#bubble{position:fixed;right:14px;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:50;max-width:min(270px,calc(100vw - 28px));background:var(--pink);color:#3a0f18;padding:.7rem .9rem;border-radius:16px 16px 4px 16px;font-style:italic;box-shadow:0 4px 12px #0004;transform:scale(0);transform-origin:bottom right;transition:transform .25s}
+#bubble.on{transform:scale(1)}
+.fx{position:fixed;pointer-events:none;z-index:99;font-size:20px;line-height:1}
+.folio{background-image:linear-gradient(180deg,transparent 60%,#FF76DD22);box-shadow:inset 0 0 0 6px var(--card),inset 0 0 0 8px var(--orange),0 12px 28px #AE132F30}
+.folio::before,.folio::after{position:absolute;color:var(--orange);font-size:1.7rem;line-height:1;pointer-events:none}
+.folio::before{content:"❧";top:10px;left:14px}
+.folio::after{content:"☙";bottom:10px;right:14px}
+.crown{text-align:center;font-size:3rem;line-height:1;margin-bottom:.2rem;animation:float 3.5s ease-in-out infinite;filter:drop-shadow(0 4px 6px #AE132F55)}
+@keyframes float{50%{transform:translateY(-6px) rotate(-4deg)}}
+h1{background:linear-gradient(90deg,var(--head),var(--pink),var(--orange),var(--pink),var(--head));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(3px 3px 0 var(--blue));animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:-200% 0}}
+.seal{font-size:2rem;letter-spacing:-.04em}
+.sep::before{content:"✧ "}.sep::after{content:" ✧"}
+.btn{background:linear-gradient(135deg,#d6304d,var(--red) 60%,#8c0f26)}
+.btn.alt{background:linear-gradient(135deg,#a9d8ff,var(--blue))}
+#bubble{white-space:pre-line}
+.tw{position:fixed;pointer-events:none;z-index:1;color:var(--pink);opacity:0;animation:tw 4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:.85;transform:scale(1) rotate(20deg)}}
+.seal{width:136px;height:136px;position:relative;padding:0;border:0;border-radius:0;background:none;box-shadow:none;font-size:1rem;cursor:pointer}
+.seal.broken{animation:none}
+.half{position:absolute;inset:0;display:block}
+.half svg{width:100%;height:100%;display:block;overflow:visible;filter:drop-shadow(0 6px 5px #0006)}
+.half.l{clip-path:polygon(-20px -20px,50% -20px,46% 20%,54% 40%,47% 60%,53% 80%,50% calc(100% + 20px),-20px calc(100% + 20px))}
+.half.r{clip-path:polygon(50% -20px,calc(100% + 20px) -20px,calc(100% + 20px) calc(100% + 20px),50% calc(100% + 20px),53% 80%,47% 60%,54% 40%,46% 20%)}
+.seal.broken .l{animation:fl .55s ease-in forwards}
+.seal.broken .r{animation:fr .55s ease-in forwards}
+@keyframes fl{to{transform:translate(-46px,70px) rotate(-32deg);opacity:0}}
+@keyframes fr{to{transform:translate(46px,70px) rotate(32deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){.seal,.crown,h1{animation:none}.seal .half{animation:none!important}.unroll{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<radialGradient id="wx" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#e8475f"/><stop offset=".5" stop-color="#AE132F"/><stop offset="1" stop-color="#6d0a1b"/></radialGradient>
+<radialGradient id="wx2" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#c41d3b"/><stop offset="1" stop-color="#8c0f26"/></radialGradient>
+<filter id="emb" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="-.9" dy="-.9" stdDeviation=".5" flood-color="#ffb3c2" flood-opacity=".85"/><feDropShadow dx="1.2" dy="1.4" stdDeviation=".7" flood-color="#2f0410" flood-opacity=".9"/></filter>
+<ellipse id="lf" cx="60" cy="22" rx="3.4" ry="6.5"/>
+<symbol id="waxseal" viewBox="0 0 120 120">
+<path d="M60 3c15 0 21 8 34 12 14 5 23 16 22 31-1 10 5 15 3 27-2 14-10 22-19 31-10 10-21 14-36 13-14-1-24-6-34-16C19 91 6 83 5 68c-1-12 6-18 4-30C8 24 21 13 35 10 46 7 49 3 60 3z" fill="url(#wx)"/>
+<circle cx="60" cy="60" r="49" fill="none" stroke="#ffb3c2" stroke-opacity=".5" stroke-width="2" transform="translate(-.8 -.8)"/>
+<circle cx="60" cy="60" r="49" fill="none" stroke="#3a0510" stroke-opacity=".55" stroke-width="2" transform="translate(.8 1)"/>
+<circle cx="60" cy="60" r="46" fill="url(#wx2)"/>
+<g fill="#c9304c" filter="url(#emb)">
+<use href="#lf"/><use href="#lf" transform="rotate(30 60 60)"/><use href="#lf" transform="rotate(60 60 60)"/><use href="#lf" transform="rotate(90 60 60)"/><use href="#lf" transform="rotate(120 60 60)"/><use href="#lf" transform="rotate(150 60 60)"/><use href="#lf" transform="rotate(180 60 60)"/><use href="#lf" transform="rotate(210 60 60)"/><use href="#lf" transform="rotate(240 60 60)"/><use href="#lf" transform="rotate(270 60 60)"/><use href="#lf" transform="rotate(300 60 60)"/><use href="#lf" transform="rotate(330 60 60)"/>
+<path d="M46 50L45 36l7 6 8-10 8 10 7-6-1 14z"/><rect x="46" y="50" width="28" height="4" rx="1.5"/>
+<circle cx="45" cy="34" r="2.2"/><circle cx="60" cy="30" r="2.4"/><circle cx="75" cy="34" r="2.2"/>
+<text x="60" y="77" text-anchor="middle" font-family="UnifrakturCook,serif" font-size="21">L&amp;M</text>
+</g></symbol></defs></svg>
+<div class="frise"></div>
+<main>
+
+<section class="folio" aria-labelledby="titre-site">
+  <div class="crown" aria-hidden="true">👑</div>
+  <h1 id="titre-site">Lucie &amp; Marion</h1>
+  <p class="sub">vous convient à leur mariage de conte de fées</p>
+  <div class="crits" aria-label="Habitants de la forêt">
+    <button class="crit" aria-label="Écureuil">🐿️</button><button class="crit" aria-label="Chouette">🦉</button><button class="crit" aria-label="Biche">🦌</button><button class="crit" aria-label="Lapin">🐇</button><button class="crit" aria-label="Fée">🧚</button><button class="crit" aria-label="Champignon">🍄</button>
+  </div>
+  <div class="sealwrap"><button class="seal" id="seal" aria-controls="scroll" aria-expanded="false" aria-label="Briser le sceau pour dérouler l'invitation"><span class="half l"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#waxseal"/></svg></span><span class="half r"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#waxseal"/></svg></span></button></div>
+  <p id="hint">Touche le sceau pour dérouler l'invitation</p>
+  <div class="unroll" id="scroll">
+    <div inert>
+      <div class="in">
+        <div class="sep">❦ ✿ ❦</div>
+        <p class="lettrine">Le royaume a besoin de vous ! Nous célébrons notre amour au cœur de la Champagne, entourés de nos plus belles personnes, de bulles, de fleurs et de gnomes imaginaires. Venez comme vous êtes, ou comme une fée si l'envie vous prend.</p>
+        <div class="when">
+          <div><b>Quand</b>[date à confirmer]</div>
+          <div><b>Où</b>[lieu], Dormans</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="folio" id="programme" aria-labelledby="h-prog">
+  <h2 id="h-prog">Le Programme</h2>
+  <ol class="time">
+    <li><h3>Le Vin d'honneur</h3><p>[heure]. Bulles de Champagne, pains d'artisan, dips colorés et crudités. Le premier festin du royaume.</p></li>
+    <li><h3>La Cérémonie laïque</h3><p>[heure]. Des mots, des vœux, des larmes de joie.</p></li>
+    <li><h3>Le Grand Banquet</h3><p>[heure]. Un repas pour tous les appétits, végétariens et vegans bienvenus.</p></li>
+    <li><h3>Le Bal</h3><p>[heure]. Chaussures confortables conseillées.</p></li>
+    <li><h3>Le Brunch du lendemain</h3><p>[heure]. Pour se raconter la veille autour d'un bon café.</p></li>
+  </ol>
+</section>
+
+<section class="folio" id="voyage" aria-labelledby="h-voy">
+  <h2 id="h-voy">Le Voyage</h2>
+  <p><strong>Venir à Dormans.</strong> [Infos train et voiture à compléter.]</p>
+  <p><strong>Dormir sur place.</strong> Des chambres au village, accessibles à pied : Le Centre et Le Champenois. En repli, des hôtels à Épernay. Réservez tôt, la Champagne est courue !</p>
+  <p><a class="btn alt" href="hebergements.html">Voir les hébergements</a></p>
+</section>
+
+<section class="folio" id="banquet" aria-labelledby="h-ban">
+  <h2 id="h-ban">Le Banquet</h2>
+  <p>Dites-nous ce que vous mangez (ou pas), pour que personne ne reparte le ventre vide : omnivore, végétarien, vegan, allergies. Merci de répondre avant le [date limite].</p>
+  <p><a class="btn" href="#">Répondre au sondage</a></p>
+  <div class="sep">❦ ✿ ❦</div>
+  <p style="text-align:center">Quel sera ton rôle à la cour ?</p>
+  <p style="text-align:center"><button class="btn alt" id="roll">Tirer mon titre</button></p>
+  <div id="titre" aria-live="polite"></div>
+</section>
+
+<section class="folio" id="cagnotte" aria-labelledby="h-cag">
+  <h2 id="h-cag">La Cagnotte</h2>
+  <p>Votre présence est notre plus beau cadeau. Si vous souhaitez tout de même ajouter une pièce au trésor du royaume, c'est par ici.</p>
+  <p><a class="btn" href="#">Ouvrir la cagnotte</a></p>
+</section>
+
+<section class="folio" id="palette" aria-labelledby="h-pal">
+  <h2 id="h-pal">Les Couleurs du royaume</h2>
+  <p style="text-align:center">Une inspiration pour vos tenues, en toute liberté. Touche une couleur pour la découvrir.</p>
+  <div class="sws">
+    <button class="sw" style="background:#AE132F" data-n="Rouge Cramoisi" data-h="AE132F" aria-label="Rouge Cramoisi"></button>
+    <button class="sw" style="background:#FF76DD" data-n="Rose Dragée" data-h="FF76DD" aria-label="Rose Dragée"></button>
+    <button class="sw" style="background:#FF891A" data-n="Orange Abricot" data-h="FF891A" aria-label="Orange Abricot"></button>
+    <button class="sw" style="background:#FFF4C9" data-n="Parchemin" data-h="FFF4C9" aria-label="Parchemin"></button>
+    <button class="sw" style="background:#7ABEEF" data-n="Bleu Ciel" data-h="7ABEEF" aria-label="Bleu Ciel"></button>
+  </div>
+  <div id="swmsg" aria-live="polite"></div>
+</section>
+
+</main>
+<footer>Une question ? [contact]. Fait avec amour et une pincée de magie.</footer>
+<div class="frise"></div>
+
+<div id="bubble" role="status" aria-live="polite"></div>
+<button id="mush" aria-label="Demander une blague au champignon">🍄</button>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var E=['🌸','🌹','✿','✨','🍄','🌷'];
+function burst(x,y,n,set){
+  if(rm)return;
+  for(var i=0;i<n;i++){
+    var s=document.createElement('span');s.className='fx';
+    s.textContent=(set||E)[Math.floor(Math.random()*(set||E).length)];
+    s.style.left=x+'px';s.style.top=y+'px';document.body.appendChild(s);
+    var a=Math.random()*6.28,d=40+Math.random()*80,dx=Math.cos(a)*d,dy=Math.sin(a)*d+70;
+    s.animate([{transform:'translate(-50%,-50%) scale(.4)',opacity:1},
+      {transform:'translate(calc(-50% + '+dx+'px),calc(-50% + '+dy+'px)) rotate('+(Math.random()*360)+'deg) scale(1.1)',opacity:0}],
+      {duration:1000+Math.random()*700,easing:'ease-out'}).onfinish=(function(el){return function(){el.remove()}})(s);
+  }
+}
+document.addEventListener('pointerdown',function(e){burst(e.clientX,e.clientY,6)});
+var last=0;
+document.addEventListener('pointermove',function(e){
+  if(e.pointerType!=='mouse')return;var t=Date.now();if(t-last<70)return;last=t;burst(e.clientX,e.clientY,1,['✦','✧']);
+});
+
+var seal=document.getElementById('seal'),sc=document.getElementById('scroll'),hint=document.getElementById('hint');
+seal.addEventListener('click',function(){
+  seal.classList.add('broken');sc.classList.add('open');sc.firstElementChild.inert=false;
+  seal.setAttribute('aria-expanded','true');
+  hint.textContent="Le parchemin est déroulé. Bienvenue au royaume !";
+  var r=seal.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,22);
+  setTimeout(function(){seal.style.display='none'},600);
+});
+
+document.querySelectorAll('.crit').forEach(function(b){
+  b.addEventListener('click',function(){b.classList.remove('hop');void b.offsetWidth;b.classList.add('hop')});
+});
+
+var J=[["Quel est le sport préféré des mariés ?","Le ring… celui du doigt !"],
+["Pourquoi la princesse a-t-elle dit oui au dragon ?","Parce qu'il avait le feu sacré."],
+["Que dit le champignon à la mariée ?","« Je t'aime à la morille ! »"],
+["Que dit un gnome devant le buffet ?","« Quelle nain-croyable table ! »"],
+["Que crie une fée au moment du toast ?","« Fée-licitations ! »"],
+["Quel est le comble pour un dragon invité au mariage ?","Se faire griller à l'entrée."],
+["Que dit la mariée au lapin ?","« Ne me pose pas un lapin le jour J ! »"],
+["Pourquoi les chevaliers de la Table ronde ont pris un traiteur ?","Pour ne pas tourner en rond."],
+["Comment appelle-t-on un gnome qui fait sa demande ?","Un petit ami, au sens propre."],
+["Pourquoi la fée a-t-elle raté son entrée ?","Elle n'avait pas déposé son plan de vol."],
+["Que dit la biche au cerf après sa demande ?","« Biche-n joué ! »"],
+["Quelle danse les dragons adorent-ils ?","Le rock, ça enflamme la piste."],
+["Quel est le comble pour un chevalier au mariage ?","Se faire désarmer par un câlin."],
+["Pourquoi la reine a-t-elle invité tout le monde ?","Un royaume sans fête, ce n'est qu'un château."]];
+var deck=[],mush=document.getElementById('mush'),bub=document.getElementById('bubble'),tm,tp;
+mush.addEventListener('click',function(){
+  if(!deck.length){deck=J.slice().sort(function(){return Math.random()-.5})}
+  var j=deck.pop();clearTimeout(tm);clearTimeout(tp);
+  bub.textContent=j[0];bub.classList.add('on');
+  tp=setTimeout(function(){bub.textContent=j[0]+'\n'+j[1];var r=mush.getBoundingClientRect();burst(r.left+r.width/2,r.top,8,['✨','✦','🍄'])},1800);
+  tm=setTimeout(function(){bub.classList.remove('on')},8000);
+});
+
+var T=["Chevalier·ère du Houmous","Ménestrel·le du Dernier Slow","Gardien·ne de la Pièce Montée","Fée des Pieds Nus sur la Piste","Dragon Végétarien","Gnome Officiel du Buffet","Sire·Dame des Bulles de Champagne","Conteur·se des Anecdotes Gênantes","Archer·ère du Bouquet"];
+var roll=document.getElementById('roll'),ti=document.getElementById('titre');
+roll.addEventListener('click',function(){
+  ti.textContent=T[Math.floor(Math.random()*T.length)];
+  var r=ti.getBoundingClientRect();burst(r.left+r.width/2,r.top,12);
+});
+
+var sm=document.getElementById('swmsg');
+document.querySelectorAll('.sw').forEach(function(b){
+  b.addEventListener('click',function(){
+    b.classList.remove('wig');void b.offsetWidth;b.classList.add('wig');
+    sm.textContent=b.dataset.n+' (#'+b.dataset.h+')';
+  });
+});
+if(!rm){for(var k=0;k<16;k++){var w=document.createElement('span');w.className='tw';w.textContent=['✦','✧','✨'][k%3];w.style.left=Math.random()*100+'vw';w.style.top=Math.random()*100+'vh';w.style.animationDelay=(Math.random()*4)+'s';w.style.fontSize=(10+Math.random()*12)+'px';document.body.appendChild(w);}}
+})();
+</script>
+</body>
+</html>
