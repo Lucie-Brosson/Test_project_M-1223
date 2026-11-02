@@ -4,15 +4,13 @@
 <meta charset="utf-8">
 <title>Notre mariage laïque</title>
 <meta name="description" content="Lucie &amp; Marion vous convient à leur mariage de conte de fées.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E👑%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2746%27 fill=%27%23AE132F%27/%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2722%27 fill=%27%23FF76DD%27/%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%279%27 fill=%27%23FF891A%27/%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#FFF4C9;--red:#AE132F;--pink:#FF76DD;--orange:#FF891A;--blue:#7ABEEF;
+:root{color-scheme:light;--cream:#FFF4C9;--red:#AE132F;--pink:#FF76DD;--orange:#FF891A;--blue:#7ABEEF;
 --bg:#FFF4C9;--ink:#3a0f18;--card:#fffaf0;--line:#AE132F;--head:#AE132F;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a0c16;--ink:#FFF4C9;--card:#3b1220;--line:#FF76DD;--head:#FF76DD}}
-:root[data-theme="dark"]{--bg:#2a0c16;--ink:#FFF4C9;--card:#3b1220;--line:#FF76DD;--head:#FF76DD}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:radial-gradient(circle at 12% 0,#FF76DD45,transparent 45%),radial-gradient(circle at 92% 18%,#7ABEEF45,transparent 42%),radial-gradient(circle,#FF76DD33 1.5px,transparent 2px) 0 0/28px 28px,var(--bg);color:var(--ink);font:1.15rem/1.65 'EB Garamond',Georgia,serif;overflow-x:hidden}
@@ -88,9 +86,59 @@ h1{background:linear-gradient(90deg,var(--head),var(--pink),var(--orange),var(--
 @keyframes fl{to{transform:translate(-46px,70px) rotate(-32deg);opacity:0}}
 @keyframes fr{to{transform:translate(46px,70px) rotate(32deg);opacity:0}}
 @media (prefers-reduced-motion:reduce){.seal,.crown,h1{animation:none}.seal .half{animation:none!important}.unroll{transition:none}}
+.ic{width:1em;height:1em;display:inline-block;vertical-align:-.14em}button>.ic{display:block;margin:auto}.fx svg{width:22px;height:22px;display:block}
+.btn{background:linear-gradient(135deg,#ffa3ea,#FF76DD 60%,#f058c8);color:#4a0f32;box-shadow:0 4px 0 #c2479f;margin:.3rem}
+.btn:active{box-shadow:0 1px 0 #c2479f}
+.btn.alt{background:linear-gradient(135deg,#a9d8ff,#7ABEEF);color:#12233f;box-shadow:0 4px 0 #3b79b0}
+.chip[aria-pressed="true"]{background:linear-gradient(135deg,#ffa3ea,#FF76DD);color:#4a0f32}
+.btns,p:has(>.btn){text-align:center;margin:.5rem 0 .2rem}
+.menu{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));right:10px;z-index:70}
+#menubtn{width:46px;height:46px;border-radius:50%;border:2px solid #FF891A;background:linear-gradient(135deg,#ffa3ea,#FF76DD);box-shadow:0 4px 0 #c2479f;cursor:pointer;padding:0;display:grid;place-items:center;margin-left:auto}
+#menubtn svg{width:24px;height:24px}
+.menu ul{list-style:none;margin:8px 0 0;padding:.4rem;min-width:210px;background:#fffaf0;border:2px solid #FF891A;border-radius:18px 6px 18px 6px;box-shadow:0 10px 24px #0003}
+.menu ul[hidden]{display:none}
+.menu li a{display:flex;align-items:center;gap:.5rem;padding:.5rem .7rem;color:#AE132F;font:600 1.05rem 'EB Garamond',Georgia,serif;text-decoration:none;border-radius:10px}
+.menu li a:hover,.menu li a[aria-current]{background:#FF76DD33}
+#menubtn:focus-visible,.menu a:focus-visible{outline:3px solid #7ABEEF;outline-offset:2px}
+.photo{margin:0 auto .2rem;width:min(78%,300px)}
+.photo img,.photo .ph{display:block;width:100%;aspect-ratio:4/5;border-radius:999px 999px 18px 18px;border:3px solid var(--line);box-shadow:0 0 0 5px var(--card),0 0 0 7px var(--orange);object-fit:cover}
+.photo .ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;background:repeating-linear-gradient(135deg,#FF76DD22 0 12px,#7ABEEF22 12px 24px);font-style:italic}
+.photo .ph .ic{width:2.4rem;height:2.4rem}
+.photo~.crown{margin-top:-1.7rem;position:relative}
+.duo{display:grid;gap:.9rem;grid-template-columns:1fr}
+@media (min-width:560px){.duo{grid-template-columns:1fr 1fr}}
+.duo>div{border:2px dashed var(--line);border-radius:16px;padding:1rem;text-align:center;display:flex;flex-direction:column;gap:.3rem}
+.duo .ic{width:2.6rem;height:2.6rem;margin:0 auto}
+.duo h3{font-size:1.6rem}.duo p{margin:.2rem 0}
+ol.time li.daybreak{margin:1.6rem 0 1.4rem -1.6rem;padding:.5rem .6rem;text-align:center;font-family:'UnifrakturCook',serif;font-size:1.4rem;color:var(--head);border-top:2px dashed var(--line);border-bottom:2px dashed var(--line)}
+ol.time li.daybreak::before{content:none}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-flower" viewBox="0 0 48 48"><g fill="#FF76DD" stroke="#AE132F" stroke-width="1.5"><circle cx="24" cy="11" r="8"/><circle cx="37" cy="21" r="8"/><circle cx="32" cy="36" r="8"/><circle cx="16" cy="36" r="8"/><circle cx="11" cy="21" r="8"/></g><circle cx="24" cy="25" r="6" fill="#FF891A" stroke="#AE132F" stroke-width="1.5"/></symbol>
+<symbol id="i-rose" viewBox="0 0 48 48"><path d="M24 34v12" stroke="#2f6b2c" stroke-width="3" stroke-linecap="round"/><path d="M24 42c-7 0-9-5-9-5s7-1 9 5zM24 40c7 0 9-5 9-5s-7-1-9 5z" fill="#6fbf6a" stroke="#2f6b2c" stroke-width="1.2"/><circle cx="24" cy="21" r="15" fill="#AE132F" stroke="#6d0a1b" stroke-width="1.5"/><path d="M24 21c0-4 5-4 5 0s-8 5-9-1 9-9 13-2" fill="none" stroke="#FF76DD" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-petal" viewBox="0 0 48 48"><path d="M24 4c10 8 14 20 0 40C10 24 14 12 24 4z" fill="#FF76DD" stroke="#AE132F" stroke-width="1.5"/></symbol>
+<symbol id="i-star" viewBox="0 0 48 48"><path d="M24 3l5 16 16 5-16 5-5 16-5-16-16-5 16-5z" fill="#FF891A" stroke="#AE132F" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+<symbol id="i-heart" viewBox="0 0 48 48"><path d="M24 42C6 29 6 12 16 10c5-1 8 3 8 6 0-3 3-7 8-6 10 2 10 19-8 32z" fill="#FF76DD" stroke="#AE132F" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 48 48"><path d="M8 40C6 18 22 6 42 6c2 20-10 36-34 34z" fill="#6fbf6a" stroke="#2f6b2c" stroke-width="1.5"/><path d="M10 38C20 26 28 18 38 10" stroke="#2f6b2c" stroke-width="1.5" fill="none"/></symbol>
+<symbol id="i-crown" viewBox="0 0 48 48"><path d="M6 36L4 14l12 10 8-14 8 14 12-10-2 22z" fill="#FF891A" stroke="#AE132F" stroke-width="1.8" stroke-linejoin="round"/><rect x="6" y="36" width="36" height="6" rx="2" fill="#FF76DD" stroke="#AE132F" stroke-width="1.8"/><circle cx="4" cy="12" r="2.6" fill="#7ABEEF" stroke="#AE132F"/><circle cx="24" cy="8" r="2.6" fill="#7ABEEF" stroke="#AE132F"/><circle cx="44" cy="12" r="2.6" fill="#7ABEEF" stroke="#AE132F"/></symbol>
+<symbol id="i-moon" viewBox="0 0 48 48"><path d="M32 5a19 19 0 1 0 11 29A16 16 0 0 1 32 5z" fill="#FFF4C9" stroke="#AE132F" stroke-width="1.8" stroke-linejoin="round"/><circle cx="15" cy="26" r="1.6" fill="#AE132F"/><path d="M13 32q3 3 6 0" stroke="#AE132F" stroke-width="1.4" fill="none"/><circle cx="12" cy="30" r="2.4" fill="#FF76DD" opacity=".6"/></symbol>
+<symbol id="i-cloud" viewBox="0 0 48 48"><g fill="#fff" stroke="#7ABEEF" stroke-width="2"><circle cx="15" cy="30" r="8"/><circle cx="26" cy="23" r="10"/><circle cx="36" cy="31" r="7"/><rect x="12" y="30" width="26" height="9" rx="4"/></g><g fill="#fff"><circle cx="15" cy="30" r="7"/><circle cx="26" cy="23" r="9"/><circle cx="36" cy="31" r="6"/><rect x="13" y="31" width="24" height="7" rx="3"/></g><circle cx="22" cy="31" r="1.3" fill="#AE132F"/><circle cx="30" cy="31" r="1.3" fill="#AE132F"/><path d="M24 33q2 2 4 0" stroke="#AE132F" stroke-width="1.2" fill="none"/></symbol>
+<symbol id="i-mush" viewBox="0 0 48 48"><path d="M17 26h14v10c0 5-3 8-7 8s-7-3-7-8z" fill="#FFF4C9" stroke="#6d0a1b" stroke-width="1.6"/><path d="M6 27C6 13 15 6 24 6s18 7 18 21z" fill="#AE132F" stroke="#6d0a1b" stroke-width="1.6"/><circle cx="16" cy="17" r="3.2" fill="#FFF4C9"/><circle cx="28" cy="13" r="2.6" fill="#FFF4C9"/><circle cx="34" cy="21" r="2.4" fill="#FFF4C9"/><circle cx="21" cy="34" r="1.2" fill="#6d0a1b"/><circle cx="27" cy="34" r="1.2" fill="#6d0a1b"/><path d="M21.5 38q2.5 2.5 5 0" stroke="#6d0a1b" fill="none" stroke-width="1.2"/></symbol>
+<symbol id="i-rabbit" viewBox="0 0 48 48"><g fill="#fff" stroke="#AE132F" stroke-width="1.6"><ellipse cx="17" cy="12" rx="4.5" ry="11"/><ellipse cx="31" cy="12" rx="4.5" ry="11"/><circle cx="24" cy="31" r="13"/></g><ellipse cx="17" cy="12" rx="2" ry="7" fill="#FF76DD"/><ellipse cx="31" cy="12" rx="2" ry="7" fill="#FF76DD"/><circle cx="19" cy="29" r="1.6" fill="#AE132F"/><circle cx="29" cy="29" r="1.6" fill="#AE132F"/><ellipse cx="24" cy="33" rx="2.2" ry="1.6" fill="#FF76DD"/><path d="M24 34.5v2.5m0 0q-3 2-5 0m5 0q3 2 5 0" stroke="#AE132F" fill="none" stroke-width="1.2"/><circle cx="14" cy="34" r="2.6" fill="#FF76DD" opacity=".5"/><circle cx="34" cy="34" r="2.6" fill="#FF76DD" opacity=".5"/></symbol>
+<symbol id="i-owl" viewBox="0 0 48 48"><path d="M10 18l3-11 9 7M38 18l-3-11-9 7" fill="#FF891A" stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"/><ellipse cx="24" cy="28" rx="15" ry="17" fill="#FF891A" stroke="#AE132F" stroke-width="1.6"/><g fill="#FFF4C9" stroke="#AE132F" stroke-width="1.4"><circle cx="18" cy="24" r="6"/><circle cx="30" cy="24" r="6"/></g><circle cx="18" cy="24" r="2.6" fill="#AE132F"/><circle cx="30" cy="24" r="2.6" fill="#AE132F"/><path d="M24 28l-3 5h6z" fill="#7ABEEF" stroke="#AE132F" stroke-width="1.2" stroke-linejoin="round"/><path d="M15 38q3 3 6 0m6 0q3 3 6 0" fill="none" stroke="#AE132F" stroke-width="1.4"/></symbol>
+<symbol id="i-butterfly" viewBox="0 0 48 48"><g stroke="#AE132F" stroke-width="1.5"><ellipse cx="15" cy="17" rx="10" ry="12" transform="rotate(-20 15 17)" fill="#FF76DD"/><ellipse cx="33" cy="17" rx="10" ry="12" transform="rotate(20 33 17)" fill="#FF76DD"/><ellipse cx="17" cy="33" rx="7" ry="9" transform="rotate(20 17 33)" fill="#7ABEEF"/><ellipse cx="31" cy="33" rx="7" ry="9" transform="rotate(-20 31 33)" fill="#7ABEEF"/><rect x="22" y="10" width="4" height="30" rx="2" fill="#6d0a1b"/></g><path d="M24 11q-4-6-7-6M24 11q4-6 7-6" stroke="#6d0a1b" fill="none" stroke-width="1.3"/><circle cx="14" cy="16" r="3" fill="#FFF4C9"/><circle cx="34" cy="16" r="3" fill="#FFF4C9"/></symbol>
+<symbol id="i-tulip" viewBox="0 0 48 48"><path d="M24 44V26" stroke="#2f6b2c" stroke-width="3" stroke-linecap="round"/><path d="M24 42c-9 0-12-9-12-9s8 0 12 9zM24 38c9 0 12-9 12-9s-8 0-12 9z" fill="#6fbf6a" stroke="#2f6b2c" stroke-width="1.2"/><path d="M12 10c0 10 5 17 12 17s12-7 12-17l-6 4-6-9-6 9z" fill="#FF76DD" stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+<symbol id="i-castle" viewBox="0 0 48 48"><g stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"><rect x="6" y="18" width="10" height="26" fill="#FFF4C9"/><rect x="32" y="18" width="10" height="26" fill="#FFF4C9"/><rect x="16" y="26" width="16" height="18" fill="#FFF4C9"/><path d="M3 18l8-13 8 13zM29 18l8-13 8 13z" fill="#FF76DD"/><path d="M20 44v-7a4 4 0 0 1 8 0v7z" fill="#7ABEEF"/></g><path d="M24 26v-9" stroke="#AE132F" stroke-width="1.6"/><path d="M24 17l7 3-7 3z" fill="#FF891A" stroke="#AE132F" stroke-width="1"/><rect x="9" y="26" width="4" height="6" rx="2" fill="#7ABEEF"/><rect x="35" y="26" width="4" height="6" rx="2" fill="#7ABEEF"/></symbol>
+<symbol id="i-house" viewBox="0 0 48 48"><g stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"><rect x="10" y="24" width="28" height="20" fill="#FFF4C9"/><path d="M4 26L24 8l20 18z" fill="#FF891A"/><rect x="21" y="32" width="7" height="12" rx="2" fill="#FF76DD"/><rect x="13" y="29" width="6" height="6" fill="#7ABEEF"/><rect x="30" y="29" width="6" height="6" fill="#7ABEEF"/></g></symbol>
+<symbol id="i-tent" viewBox="0 0 48 48"><path d="M4 43L24 9l20 34z" fill="#7ABEEF" stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 43l8-17 8 17z" fill="#FFF4C9" stroke="#AE132F" stroke-width="1.4" stroke-linejoin="round"/><path d="M24 9V2l7 2.5L24 7" fill="#FF76DD" stroke="#AE132F" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+<symbol id="i-bubble" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="#7ABEEF" fill-opacity=".3" stroke="#7ABEEF" stroke-width="2"/><path d="M13 18a14 14 0 0 1 10-8" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M24 35c-8-5-9-11-5-12 3-.8 5 1.4 5 3 0-1.600 2-3.800 5-3 4 1 3 7-5 12z" fill="#FF76DD" stroke="#AE132F" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+<symbol id="i-train" viewBox="0 0 48 48"><g stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"><rect x="6" y="10" width="36" height="26" rx="7" fill="#FF76DD"/><rect x="11" y="15" width="12" height="10" rx="2.500" fill="#FFF4C9"/><rect x="26" y="15" width="11" height="10" rx="2.500" fill="#FFF4C9"/><circle cx="14" cy="39" r="4.500" fill="#FF891A"/><circle cx="34" cy="39" r="4.500" fill="#FF891A"/></g><path d="M18 31h12" stroke="#AE132F" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="31" r="1.500" fill="#FFF4C9"/><circle cx="36" cy="31" r="1.500" fill="#FFF4C9"/><path d="M20 10V6h8v4" stroke="#AE132F" stroke-width="1.600" fill="#7ABEEF"/></symbol>
+<symbol id="i-car" viewBox="0 0 48 48"><path d="M11 25l5-11h16l6 11z" fill="#7ABEEF" stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"/><rect x="4" y="24" width="40" height="13" rx="6" fill="#FF891A" stroke="#AE132F" stroke-width="1.6"/><g fill="#6d0a1b"><circle cx="14" cy="38" r="5"/><circle cx="34" cy="38" r="5"/></g><g fill="#FFF4C9"><circle cx="14" cy="38" r="1.800"/><circle cx="34" cy="38" r="1.800"/></g><circle cx="41" cy="29" r="2" fill="#FFF4C9"/></symbol>
+
+<symbol id="i-sun" viewBox="0 0 48 48"><g stroke="#FF891A" stroke-width="3" stroke-linecap="round"><path d="M24 3v7M24 38v7M3 24h7M38 24h7M9 9l5 5M34 34l5 5M39 9l-5 5M14 34l-5 5"/></g><circle cx="24" cy="24" r="10" fill="#FFF4C9" stroke="#AE132F" stroke-width="1.8"/><circle cx="20.5" cy="23" r="1.3" fill="#AE132F"/><circle cx="27.5" cy="23" r="1.3" fill="#AE132F"/><path d="M21 27.5q3 2.5 6 0" stroke="#AE132F" stroke-width="1.3" fill="none"/></symbol>
+</defs></svg>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <radialGradient id="wx" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#e8475f"/><stop offset=".5" stop-color="#AE132F"/><stop offset="1" stop-color="#6d0a1b"/></radialGradient>
 <radialGradient id="wx2" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#c41d3b"/><stop offset="1" stop-color="#8c0f26"/></radialGradient>
@@ -111,12 +159,11 @@ h1{background:linear-gradient(90deg,var(--head),var(--pink),var(--orange),var(--
 <main>
 
 <section class="folio" aria-labelledby="titre-site">
-  <div class="crown" aria-hidden="true">👑</div>
+  <figure class="photo"><!-- PHOTO : remplacez le bloc <div class="ph"> ci-dessous par <img src="photo.jpg" alt="Lucie et Marion"> -->
+    <div class="ph"><svg class="ic"><use href="#i-flower"/></svg><span>Votre photo ici</span></div></figure>
+  <div class="crown" aria-hidden="true"><svg class="ic"><use href="#i-crown"/></svg></div>
   <h1 id="titre-site">Lucie &amp; Marion</h1>
   <p class="sub">vous convient à leur mariage de conte de fées</p>
-  <div class="crits" aria-label="Habitants de la forêt">
-    <button class="crit" aria-label="Écureuil">🐿️</button><button class="crit" aria-label="Chouette">🦉</button><button class="crit" aria-label="Biche">🦌</button><button class="crit" aria-label="Lapin">🐇</button><button class="crit" aria-label="Fée">🧚</button><button class="crit" aria-label="Champignon">🍄</button>
-  </div>
   <div class="sealwrap"><button class="seal" id="seal" aria-controls="scroll" aria-expanded="false" aria-label="Briser le sceau pour dérouler l'invitation"><span class="half l"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#waxseal"/></svg></span><span class="half r"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#waxseal"/></svg></span></button></div>
   <p id="hint">Touche le sceau pour dérouler l'invitation</p>
   <div class="unroll" id="scroll">
@@ -125,8 +172,8 @@ h1{background:linear-gradient(90deg,var(--head),var(--pink),var(--orange),var(--
         <div class="sep">❦ ✿ ❦</div>
         <p class="lettrine">Le royaume a besoin de vous ! Nous célébrons notre amour au cœur de la Champagne, entourés de nos plus belles personnes, de bulles, de fleurs et de gnomes imaginaires. Venez comme vous êtes, ou comme une fée si l'envie vous prend.</p>
         <div class="when">
-          <div><b>Quand</b>[date à confirmer]</div>
-          <div><b>Où</b>[lieu], Dormans</div>
+          <div><b>Quand</b>Samedi 31 juillet 2027, dès 15h</div>
+          <div><b>Où</b>À Dormans : le château, puis la salle des fêtes</div>
         </div>
       </div>
     </div>
@@ -136,25 +183,30 @@ h1{background:linear-gradient(90deg,var(--head),var(--pink),var(--orange),var(--
 <section class="folio" id="programme" aria-labelledby="h-prog">
   <h2 id="h-prog">Le Programme</h2>
   <ol class="time">
-    <li><h3>Le Vin d'honneur</h3><p>[heure]. Bulles de Champagne, pains d'artisan, dips colorés et crudités. Le premier festin du royaume.</p></li>
-    <li><h3>La Cérémonie laïque</h3><p>[heure]. Des mots, des vœux, des larmes de joie.</p></li>
-    <li><h3>Le Grand Banquet</h3><p>[heure]. Un repas pour tous les appétits, végétariens et vegans bienvenus.</p></li>
-    <li><h3>Le Bal</h3><p>[heure]. Chaussures confortables conseillées.</p></li>
-    <li><h3>Le Brunch du lendemain</h3><p>[heure]. Pour se raconter la veille autour d'un bon café.</p></li>
+    <li><h3>Les rafraîchissements de bienvenue</h3><p><strong>Avant 15h.</strong> Si vous arrivez en avance, quelques rafraîchissements vous attendent pour reprendre des forces avant la grande scène.</p></li>
+    <li><h3>La Cérémonie laïque</h3><p><strong>De 15h à 16h environ.</strong> Rendez-vous à 15h à Dormans. Des mots, des vœux et sûrement quelques larmes de joie, pendant 45 minutes à 1 heure.</p></li>
+    <li><h3>Le Vin d'honneur au Château de Dormans</h3><p><strong>De 16h à 19h environ.</strong> Bulles de Champagne, pains d'artisan, dips colorés et crudités, dans un vrai décor de conte. Le premier festin du royaume.</p></li>
+    <li><h3>Le Cortège féerique</h3><p><strong>À la fin du vin d'honneur.</strong> On quitte le château pour rejoindre la salle des fêtes à pied, en cortège joyeux. Chaussures confortables conseillées !</p></li>
+    <li><h3>Le Grand Banquet à la salle des fêtes</h3><p><strong>À partir de 19h, jusqu'à point d'heure.</strong> Un dîner pour tous les appétits, végétariens et vegans bienvenus, puis la fête, comme dans les contes.</p></li>
+    <li><h3>Le Retour des voyageurs</h3><p><strong>Quand les étoiles sont hautes.</strong> Chacun rentre chez soi. Attention, le dernier train vers Paris part tôt : voyez <a href="venir.html">comment venir</a> et <a href="hebergements.html">où dormir</a>.</p></li>
+    <li class="daybreak"><svg class="ic"><use href="#i-sun"/></svg> Le lendemain, dimanche 1er août</li>
+    <li><h3>Le Brunch des lendemains</h3><p><strong>[heure à confirmer].</strong> Pour finir les restes du festin, partager un dernier moment et se dire au revoir avant que chacun reparte vers son royaume.</p></li>
+    
   </ol>
 </section>
 
 <section class="folio" id="voyage" aria-labelledby="h-voy">
   <h2 id="h-voy">Le Voyage</h2>
-  <p><strong>Venir à Dormans.</strong> [Infos train et voiture à compléter.]</p>
-  <p><strong>Dormir sur place.</strong> Des chambres au village, accessibles à pied : Le Centre et Le Champenois. En repli, des hôtels à Épernay. Réservez tôt, la Champagne est courue !</p>
-  <p><a class="btn alt" href="hebergements.html">Voir les hébergements</a></p>
+  <div class="duo">
+    <div><svg class="ic"><use href="#i-train"/></svg><h3>Venir à Dormans</h3><p>En TER depuis Paris Est (environ 1h05) ou depuis Reims, ou en voiture.</p><p><a class="btn" href="venir.html">Comment venir</a></p></div>
+    <div><svg class="ic"><use href="#i-castle"/></svg><h3>Dormir sur place</h3><p>Hôtels, maisons de village, camping et bulles étoilées, à Dormans et dans la vallée.</p><p><a class="btn" href="hebergements.html">Où dormir</a></p></div>
+  </div>
 </section>
 
 <section class="folio" id="banquet" aria-labelledby="h-ban">
   <h2 id="h-ban">Le Banquet</h2>
   <p>Dites-nous ce que vous mangez (ou pas), pour que personne ne reparte le ventre vide : omnivore, végétarien, vegan, allergies. Merci de répondre avant le [date limite].</p>
-  <p><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeQpdn-v4-ISxDTxD3PovaxDKOCCPLTVB-XBRyFR63cAD1BiA/viewform?usp=dialog">Répondre au sondage</a></p>
+  <p><a class="btn" href="#">Répondre au sondage</a></p>
   <div class="sep">❦ ✿ ❦</div>
   <p style="text-align:center">Quel sera ton rôle à la cour ?</p>
   <p style="text-align:center"><button class="btn alt" id="roll">Tirer mon titre</button></p>
@@ -185,22 +237,19 @@ h1{background:linear-gradient(90deg,var(--head),var(--pink),var(--orange),var(--
 <div class="frise"></div>
 
 <div id="bubble" role="status" aria-live="polite"></div>
-<button id="mush" aria-label="Demander une blague au champignon">🍄</button>
+<button id="mush" aria-label="Demander une blague au champignon"><svg class="ic"><use href="#i-mush"/></svg></button>
 
 <script>
 (function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-var E=['🌸','🌹','✿','✨','🍄','🌷'];
 function burst(x,y,n,set){
-  if(rm)return;
+  if(rm)return;var E=set||['i-flower','i-rose','i-petal','i-star','i-heart','i-leaf'];
   for(var i=0;i<n;i++){
     var s=document.createElement('span');s.className='fx';
-    s.textContent=(set||E)[Math.floor(Math.random()*(set||E).length)];
+    s.innerHTML='<svg><use href="#'+E[Math.floor(Math.random()*E.length)]+'"/></svg>';
     s.style.left=x+'px';s.style.top=y+'px';document.body.appendChild(s);
-    var a=Math.random()*6.28,d=40+Math.random()*80,dx=Math.cos(a)*d,dy=Math.sin(a)*d+70;
-    s.animate([{transform:'translate(-50%,-50%) scale(.4)',opacity:1},
-      {transform:'translate(calc(-50% + '+dx+'px),calc(-50% + '+dy+'px)) rotate('+(Math.random()*360)+'deg) scale(1.1)',opacity:0}],
-      {duration:1000+Math.random()*700,easing:'ease-out'}).onfinish=(function(el){return function(){el.remove()}})(s);
+    var a=Math.random()*6.28,d=40+Math.random()*80,dx=Math.cos(a)*d,dy=Math.sin(a)*d+60;
+    s.animate([{transform:'translate(-50%,-50%) scale(.4)',opacity:1},{transform:'translate(calc(-50% + '+dx+'px),calc(-50% + '+dy+'px)) rotate('+(Math.random()*360)+'deg) scale(1.1)',opacity:0}],{duration:1000+Math.random()*700,easing:'ease-out'}).onfinish=(function(el){return function(){el.remove()}})(s);
   }
 }
 document.addEventListener('pointerdown',function(e){burst(e.clientX,e.clientY,6)});
@@ -222,26 +271,29 @@ document.querySelectorAll('.crit').forEach(function(b){
   b.addEventListener('click',function(){b.classList.remove('hop');void b.offsetWidth;b.classList.add('hop')});
 });
 
-var J=[["Quel est le sport préféré des mariés ?","Le ring… celui du doigt !"],
+var J=[["Quel est le sport préféré des futurs mariés ?","Le ring. Celui du doigt, pas celui de la boxe."],
+["Comment un dragon fait-il sa demande en mariage ?","Il se met à genoux, crache du feu et demande : « Veux-tu être ma flamme ? »"],
+["Que dit un gnome devant le buffet ?","« C'est nain-croyable, il y en a pour tout le royaume ! »"],
+["Pourquoi les fées ne ratent jamais un mariage ?","Parce qu'elles adorent les fée-licitations."],
+["Que dit la mariée quand un gnome lui marche sur la traîne ?","« Nain, mais ça ne va pas ? »"],
+["Quel est le comble pour un chevalier le jour de son mariage ?","Se faire désarmer par un « oui »."],
+["Que fait le ménestrel quand le micro lâche ?","Il luth en silence."],
+["Quel est le plat préféré d'un dragon invité ?","Le flambé, forcément."],
 ["Pourquoi la princesse a-t-elle dit oui au dragon ?","Parce qu'il avait le feu sacré."],
+["Quelle est la boisson préférée des licornes ?","Le champagne : ça pétille comme leur crinière."],
+["Pourquoi le lapin est-il enfin prêt à se marier ?","Il a arrêté de poser des lapins."],
+["Que dit le Petit Chaperon rouge sur la piste de danse ?","« Grand-mère, comme tu as de grands pas ! »"],
+["Que dit la Lune en arrivant à Dormans ?","« Désolée du retard, c'était un TER. »"],
 ["Que dit le champignon à la mariée ?","« Je t'aime à la morille ! »"],
-["Que dit un gnome devant le buffet ?","« Quelle nain-croyable table ! »"],
-["Que crie une fée au moment du toast ?","« Fée-licitations ! »"],
-["Quel est le comble pour un dragon invité au mariage ?","Se faire griller à l'entrée."],
-["Que dit la mariée au lapin ?","« Ne me pose pas un lapin le jour J ! »"],
-["Pourquoi les chevaliers de la Table ronde ont pris un traiteur ?","Pour ne pas tourner en rond."],
-["Comment appelle-t-on un gnome qui fait sa demande ?","Un petit ami, au sens propre."],
-["Pourquoi la fée a-t-elle raté son entrée ?","Elle n'avait pas déposé son plan de vol."],
-["Que dit la biche au cerf après sa demande ?","« Biche-n joué ! »"],
-["Quelle danse les dragons adorent-ils ?","Le rock, ça enflamme la piste."],
-["Quel est le comble pour un chevalier au mariage ?","Se faire désarmer par un câlin."],
-["Pourquoi la reine a-t-elle invité tout le monde ?","Un royaume sans fête, ce n'est qu'un château."]];
+["Combien font un plus un le jour d'un mariage ?","Un « nous », mais deux parts de gâteau."],
+["Que dit la pièce montée au gnome qui la regarde de trop près ?","« Arrête, tu me fais rougir comme un chou ! »"]];
+
 var deck=[],mush=document.getElementById('mush'),bub=document.getElementById('bubble'),tm,tp;
 mush.addEventListener('click',function(){
   if(!deck.length){deck=J.slice().sort(function(){return Math.random()-.5})}
   var j=deck.pop();clearTimeout(tm);clearTimeout(tp);
   bub.textContent=j[0];bub.classList.add('on');
-  tp=setTimeout(function(){bub.textContent=j[0]+'\n'+j[1];var r=mush.getBoundingClientRect();burst(r.left+r.width/2,r.top,8,['✨','✦','🍄'])},1800);
+  tp=setTimeout(function(){bub.textContent=j[0]+'\n'+j[1];var r=mush.getBoundingClientRect();burst(r.left+r.width/2,r.top,8,['i-star','i-mush','i-flower'])},1800);
   tm=setTimeout(function(){bub.classList.remove('on')},8000);
 });
 
@@ -259,8 +311,10 @@ document.querySelectorAll('.sw').forEach(function(b){
     sm.textContent=b.dataset.n+' (#'+b.dataset.h+')';
   });
 });
-if(!rm){for(var k=0;k<16;k++){var w=document.createElement('span');w.className='tw';w.textContent=['✦','✧','✨'][k%3];w.style.left=Math.random()*100+'vw';w.style.top=Math.random()*100+'vh';w.style.animationDelay=(Math.random()*4)+'s';w.style.fontSize=(10+Math.random()*12)+'px';document.body.appendChild(w);}}
+if(!rm){for(var k=0;k<16;k++){var w=document.createElement('span');w.className='tw';w.textContent=['✦','✧','✶'][k%3];w.style.left=Math.random()*100+'vw';w.style.top=Math.random()*100+'vh';w.style.animationDelay=(Math.random()*4)+'s';w.style.fontSize=(10+Math.random()*12)+'px';document.body.appendChild(w);}}
 })();
 </script>
+<nav class="menu" aria-label="Menu du site"><button id="menubtn" aria-expanded="false" aria-controls="menupanel" aria-label="Ouvrir le menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="#4a0f32" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg></button><ul id="menupanel" hidden><li><a href="index.html" aria-current="page"><svg class="ic"><use href="#i-flower"/></svg>Accueil</a></li><li><a href="index.html#programme"><svg class="ic"><use href="#i-flower"/></svg>Le programme</a></li><li><a href="venir.html"><svg class="ic"><use href="#i-flower"/></svg>Comment venir</a></li><li><a href="hebergements.html"><svg class="ic"><use href="#i-flower"/></svg>Où dormir</a></li><li><a href="index.html#banquet"><svg class="ic"><use href="#i-flower"/></svg>Le banquet</a></li><li><a href="index.html#cagnotte"><svg class="ic"><use href="#i-flower"/></svg>La cagnotte</a></li></ul></nav>
+<script>(function(){var b=document.getElementById("menubtn"),p=document.getElementById("menupanel");function t(o){p.hidden=!o;b.setAttribute("aria-expanded",o)}b.addEventListener("click",function(e){e.stopPropagation();t(p.hidden)});document.addEventListener("click",function(e){if(!p.hidden&&!p.contains(e.target))t(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape")t(false)})})();</script>
 </body>
 </html>

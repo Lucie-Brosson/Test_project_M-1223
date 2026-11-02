@@ -3,14 +3,12 @@
 <head>
 <meta charset="utf-8">
 <title>Où dormir près de Dormans</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🌙%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2746%27 fill=%27%23AE132F%27/%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2722%27 fill=%27%23FF76DD%27/%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%279%27 fill=%27%23FF891A%27/%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--bg1:#bfe3ff;--bg2:#FFF4C9;--bg3:#ffd0f1;--ink:#3a0f18;--card:#ffffffcf;--head:#AE132F;--line:#FF891A;--star:#FF76DD;
+:root{color-scheme:light;--bg1:#bfe3ff;--bg2:#FFF4C9;--bg3:#ffd0f1;--ink:#3a0f18;--card:#ffffffcf;--head:#AE132F;--line:#FF891A;--star:#FF76DD;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#1b1646;--bg2:#2a0c16;--bg3:#4a1236;--ink:#FFF4C9;--card:#3b1220d9;--head:#FF76DD;--star:#FFF4C9}}
-:root[data-theme="dark"]{--bg1:#1b1646;--bg2:#2a0c16;--bg3:#4a1236;--ink:#FFF4C9;--card:#3b1220d9;--head:#FF76DD;--star:#FFF4C9}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;min-height:100vh;background:var(--bg2) linear-gradient(180deg,var(--bg1) 0,var(--bg2) 45%,var(--bg3) 100%);color:var(--ink);font:1.15rem/1.6 'EB Garamond',Georgia,serif;overflow-x:hidden}
@@ -52,19 +50,82 @@ footer{text-align:center;padding:0 1rem 2rem;font-style:italic;position:relative
 .cloud{position:fixed;z-index:1;pointer-events:none;font-size:4rem;opacity:.75;animation:drift 60s linear infinite}
 @keyframes drift{from{transform:translateX(-25vw)}to{transform:translateX(125vw)}}
 @media (prefers-reduced-motion:reduce){.moon,h1,.cloud,.tw,.heart{animation:none}}
+.ic{width:1em;height:1em;display:inline-block;vertical-align:-.14em}button>.ic{display:block;margin:auto}.fx svg{width:22px;height:22px;display:block}
+.btn{background:linear-gradient(135deg,#ffa3ea,#FF76DD 60%,#f058c8);color:#4a0f32;box-shadow:0 4px 0 #c2479f;margin:.3rem}
+.btn:active{box-shadow:0 1px 0 #c2479f}
+.btn.alt{background:linear-gradient(135deg,#a9d8ff,#7ABEEF);color:#12233f;box-shadow:0 4px 0 #3b79b0}
+.chip[aria-pressed="true"]{background:linear-gradient(135deg,#ffa3ea,#FF76DD);color:#4a0f32}
+.btns,p:has(>.btn){text-align:center;margin:.5rem 0 .2rem}
+.menu{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));right:10px;z-index:70}
+#menubtn{width:46px;height:46px;border-radius:50%;border:2px solid #FF891A;background:linear-gradient(135deg,#ffa3ea,#FF76DD);box-shadow:0 4px 0 #c2479f;cursor:pointer;padding:0;display:grid;place-items:center;margin-left:auto}
+#menubtn svg{width:24px;height:24px}
+.menu ul{list-style:none;margin:8px 0 0;padding:.4rem;min-width:210px;background:#fffaf0;border:2px solid #FF891A;border-radius:18px 6px 18px 6px;box-shadow:0 10px 24px #0003}
+.menu ul[hidden]{display:none}
+.menu li a{display:flex;align-items:center;gap:.5rem;padding:.5rem .7rem;color:#AE132F;font:600 1.05rem 'EB Garamond',Georgia,serif;text-decoration:none;border-radius:10px}
+.menu li a:hover,.menu li a[aria-current]{background:#FF76DD33}
+#menubtn:focus-visible,.menu a:focus-visible{outline:3px solid #7ABEEF;outline-offset:2px}
+.mapcard{background:var(--card);border:2px solid #ffffffaa;border-radius:28px 8px 28px 8px;padding:.8rem;margin:0 0 1rem;box-shadow:0 12px 30px #AE132F22,inset 0 0 0 6px #ffffff30,inset 0 0 0 7px var(--line)}
+svg.map{width:100%;height:auto;display:block;border-radius:18px}
+.pin{cursor:pointer}.pin:focus-visible{outline:none}.pin:focus-visible .ring{stroke:#7ABEEF;stroke-width:3}
+#mapinfo{text-align:center;min-height:1.7em;font-style:italic;margin:.5rem 0 .2rem}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:.9rem;font-size:.92rem;margin:.2rem 0}
+.legend i{display:inline-block;width:.8em;height:.8em;border-radius:50%;border:2px solid #AE132F;margin-right:.3em;vertical-align:-.05em}
+.card.hl{outline:4px solid #FF76DD;outline-offset:4px}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-flower" viewBox="0 0 48 48"><g fill="#FF76DD" stroke="#AE132F" stroke-width="1.5"><circle cx="24" cy="11" r="8"/><circle cx="37" cy="21" r="8"/><circle cx="32" cy="36" r="8"/><circle cx="16" cy="36" r="8"/><circle cx="11" cy="21" r="8"/></g><circle cx="24" cy="25" r="6" fill="#FF891A" stroke="#AE132F" stroke-width="1.5"/></symbol>
+<symbol id="i-rose" viewBox="0 0 48 48"><path d="M24 34v12" stroke="#2f6b2c" stroke-width="3" stroke-linecap="round"/><path d="M24 42c-7 0-9-5-9-5s7-1 9 5zM24 40c7 0 9-5 9-5s-7-1-9 5z" fill="#6fbf6a" stroke="#2f6b2c" stroke-width="1.2"/><circle cx="24" cy="21" r="15" fill="#AE132F" stroke="#6d0a1b" stroke-width="1.5"/><path d="M24 21c0-4 5-4 5 0s-8 5-9-1 9-9 13-2" fill="none" stroke="#FF76DD" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-petal" viewBox="0 0 48 48"><path d="M24 4c10 8 14 20 0 40C10 24 14 12 24 4z" fill="#FF76DD" stroke="#AE132F" stroke-width="1.5"/></symbol>
+<symbol id="i-star" viewBox="0 0 48 48"><path d="M24 3l5 16 16 5-16 5-5 16-5-16-16-5 16-5z" fill="#FF891A" stroke="#AE132F" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+<symbol id="i-heart" viewBox="0 0 48 48"><path d="M24 42C6 29 6 12 16 10c5-1 8 3 8 6 0-3 3-7 8-6 10 2 10 19-8 32z" fill="#FF76DD" stroke="#AE132F" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 48 48"><path d="M8 40C6 18 22 6 42 6c2 20-10 36-34 34z" fill="#6fbf6a" stroke="#2f6b2c" stroke-width="1.5"/><path d="M10 38C20 26 28 18 38 10" stroke="#2f6b2c" stroke-width="1.5" fill="none"/></symbol>
+<symbol id="i-crown" viewBox="0 0 48 48"><path d="M6 36L4 14l12 10 8-14 8 14 12-10-2 22z" fill="#FF891A" stroke="#AE132F" stroke-width="1.8" stroke-linejoin="round"/><rect x="6" y="36" width="36" height="6" rx="2" fill="#FF76DD" stroke="#AE132F" stroke-width="1.8"/><circle cx="4" cy="12" r="2.6" fill="#7ABEEF" stroke="#AE132F"/><circle cx="24" cy="8" r="2.6" fill="#7ABEEF" stroke="#AE132F"/><circle cx="44" cy="12" r="2.6" fill="#7ABEEF" stroke="#AE132F"/></symbol>
+<symbol id="i-moon" viewBox="0 0 48 48"><path d="M32 5a19 19 0 1 0 11 29A16 16 0 0 1 32 5z" fill="#FFF4C9" stroke="#AE132F" stroke-width="1.8" stroke-linejoin="round"/><circle cx="15" cy="26" r="1.6" fill="#AE132F"/><path d="M13 32q3 3 6 0" stroke="#AE132F" stroke-width="1.4" fill="none"/><circle cx="12" cy="30" r="2.4" fill="#FF76DD" opacity=".6"/></symbol>
+<symbol id="i-cloud" viewBox="0 0 48 48"><g fill="#fff" stroke="#7ABEEF" stroke-width="2"><circle cx="15" cy="30" r="8"/><circle cx="26" cy="23" r="10"/><circle cx="36" cy="31" r="7"/><rect x="12" y="30" width="26" height="9" rx="4"/></g><g fill="#fff"><circle cx="15" cy="30" r="7"/><circle cx="26" cy="23" r="9"/><circle cx="36" cy="31" r="6"/><rect x="13" y="31" width="24" height="7" rx="3"/></g><circle cx="22" cy="31" r="1.3" fill="#AE132F"/><circle cx="30" cy="31" r="1.3" fill="#AE132F"/><path d="M24 33q2 2 4 0" stroke="#AE132F" stroke-width="1.2" fill="none"/></symbol>
+<symbol id="i-mush" viewBox="0 0 48 48"><path d="M17 26h14v10c0 5-3 8-7 8s-7-3-7-8z" fill="#FFF4C9" stroke="#6d0a1b" stroke-width="1.6"/><path d="M6 27C6 13 15 6 24 6s18 7 18 21z" fill="#AE132F" stroke="#6d0a1b" stroke-width="1.6"/><circle cx="16" cy="17" r="3.2" fill="#FFF4C9"/><circle cx="28" cy="13" r="2.6" fill="#FFF4C9"/><circle cx="34" cy="21" r="2.4" fill="#FFF4C9"/><circle cx="21" cy="34" r="1.2" fill="#6d0a1b"/><circle cx="27" cy="34" r="1.2" fill="#6d0a1b"/><path d="M21.5 38q2.5 2.5 5 0" stroke="#6d0a1b" fill="none" stroke-width="1.2"/></symbol>
+<symbol id="i-rabbit" viewBox="0 0 48 48"><g fill="#fff" stroke="#AE132F" stroke-width="1.6"><ellipse cx="17" cy="12" rx="4.5" ry="11"/><ellipse cx="31" cy="12" rx="4.5" ry="11"/><circle cx="24" cy="31" r="13"/></g><ellipse cx="17" cy="12" rx="2" ry="7" fill="#FF76DD"/><ellipse cx="31" cy="12" rx="2" ry="7" fill="#FF76DD"/><circle cx="19" cy="29" r="1.6" fill="#AE132F"/><circle cx="29" cy="29" r="1.6" fill="#AE132F"/><ellipse cx="24" cy="33" rx="2.2" ry="1.6" fill="#FF76DD"/><path d="M24 34.5v2.5m0 0q-3 2-5 0m5 0q3 2 5 0" stroke="#AE132F" fill="none" stroke-width="1.2"/><circle cx="14" cy="34" r="2.6" fill="#FF76DD" opacity=".5"/><circle cx="34" cy="34" r="2.6" fill="#FF76DD" opacity=".5"/></symbol>
+<symbol id="i-owl" viewBox="0 0 48 48"><path d="M10 18l3-11 9 7M38 18l-3-11-9 7" fill="#FF891A" stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"/><ellipse cx="24" cy="28" rx="15" ry="17" fill="#FF891A" stroke="#AE132F" stroke-width="1.6"/><g fill="#FFF4C9" stroke="#AE132F" stroke-width="1.4"><circle cx="18" cy="24" r="6"/><circle cx="30" cy="24" r="6"/></g><circle cx="18" cy="24" r="2.6" fill="#AE132F"/><circle cx="30" cy="24" r="2.6" fill="#AE132F"/><path d="M24 28l-3 5h6z" fill="#7ABEEF" stroke="#AE132F" stroke-width="1.2" stroke-linejoin="round"/><path d="M15 38q3 3 6 0m6 0q3 3 6 0" fill="none" stroke="#AE132F" stroke-width="1.4"/></symbol>
+<symbol id="i-butterfly" viewBox="0 0 48 48"><g stroke="#AE132F" stroke-width="1.5"><ellipse cx="15" cy="17" rx="10" ry="12" transform="rotate(-20 15 17)" fill="#FF76DD"/><ellipse cx="33" cy="17" rx="10" ry="12" transform="rotate(20 33 17)" fill="#FF76DD"/><ellipse cx="17" cy="33" rx="7" ry="9" transform="rotate(20 17 33)" fill="#7ABEEF"/><ellipse cx="31" cy="33" rx="7" ry="9" transform="rotate(-20 31 33)" fill="#7ABEEF"/><rect x="22" y="10" width="4" height="30" rx="2" fill="#6d0a1b"/></g><path d="M24 11q-4-6-7-6M24 11q4-6 7-6" stroke="#6d0a1b" fill="none" stroke-width="1.3"/><circle cx="14" cy="16" r="3" fill="#FFF4C9"/><circle cx="34" cy="16" r="3" fill="#FFF4C9"/></symbol>
+<symbol id="i-tulip" viewBox="0 0 48 48"><path d="M24 44V26" stroke="#2f6b2c" stroke-width="3" stroke-linecap="round"/><path d="M24 42c-9 0-12-9-12-9s8 0 12 9zM24 38c9 0 12-9 12-9s-8 0-12 9z" fill="#6fbf6a" stroke="#2f6b2c" stroke-width="1.2"/><path d="M12 10c0 10 5 17 12 17s12-7 12-17l-6 4-6-9-6 9z" fill="#FF76DD" stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+<symbol id="i-castle" viewBox="0 0 48 48"><g stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"><rect x="6" y="18" width="10" height="26" fill="#FFF4C9"/><rect x="32" y="18" width="10" height="26" fill="#FFF4C9"/><rect x="16" y="26" width="16" height="18" fill="#FFF4C9"/><path d="M3 18l8-13 8 13zM29 18l8-13 8 13z" fill="#FF76DD"/><path d="M20 44v-7a4 4 0 0 1 8 0v7z" fill="#7ABEEF"/></g><path d="M24 26v-9" stroke="#AE132F" stroke-width="1.6"/><path d="M24 17l7 3-7 3z" fill="#FF891A" stroke="#AE132F" stroke-width="1"/><rect x="9" y="26" width="4" height="6" rx="2" fill="#7ABEEF"/><rect x="35" y="26" width="4" height="6" rx="2" fill="#7ABEEF"/></symbol>
+<symbol id="i-house" viewBox="0 0 48 48"><g stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"><rect x="10" y="24" width="28" height="20" fill="#FFF4C9"/><path d="M4 26L24 8l20 18z" fill="#FF891A"/><rect x="21" y="32" width="7" height="12" rx="2" fill="#FF76DD"/><rect x="13" y="29" width="6" height="6" fill="#7ABEEF"/><rect x="30" y="29" width="6" height="6" fill="#7ABEEF"/></g></symbol>
+<symbol id="i-tent" viewBox="0 0 48 48"><path d="M4 43L24 9l20 34z" fill="#7ABEEF" stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 43l8-17 8 17z" fill="#FFF4C9" stroke="#AE132F" stroke-width="1.4" stroke-linejoin="round"/><path d="M24 9V2l7 2.5L24 7" fill="#FF76DD" stroke="#AE132F" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+<symbol id="i-bubble" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="#7ABEEF" fill-opacity=".3" stroke="#7ABEEF" stroke-width="2"/><path d="M13 18a14 14 0 0 1 10-8" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M24 35c-8-5-9-11-5-12 3-.8 5 1.4 5 3 0-1.600 2-3.800 5-3 4 1 3 7-5 12z" fill="#FF76DD" stroke="#AE132F" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+<symbol id="i-train" viewBox="0 0 48 48"><g stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"><rect x="6" y="10" width="36" height="26" rx="7" fill="#FF76DD"/><rect x="11" y="15" width="12" height="10" rx="2.500" fill="#FFF4C9"/><rect x="26" y="15" width="11" height="10" rx="2.500" fill="#FFF4C9"/><circle cx="14" cy="39" r="4.500" fill="#FF891A"/><circle cx="34" cy="39" r="4.500" fill="#FF891A"/></g><path d="M18 31h12" stroke="#AE132F" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="31" r="1.500" fill="#FFF4C9"/><circle cx="36" cy="31" r="1.500" fill="#FFF4C9"/><path d="M20 10V6h8v4" stroke="#AE132F" stroke-width="1.600" fill="#7ABEEF"/></symbol>
+<symbol id="i-car" viewBox="0 0 48 48"><path d="M11 25l5-11h16l6 11z" fill="#7ABEEF" stroke="#AE132F" stroke-width="1.6" stroke-linejoin="round"/><rect x="4" y="24" width="40" height="13" rx="6" fill="#FF891A" stroke="#AE132F" stroke-width="1.6"/><g fill="#6d0a1b"><circle cx="14" cy="38" r="5"/><circle cx="34" cy="38" r="5"/></g><g fill="#FFF4C9"><circle cx="14" cy="38" r="1.800"/><circle cx="34" cy="38" r="1.800"/></g><circle cx="41" cy="29" r="2" fill="#FFF4C9"/></symbol>
+
+<symbol id="i-sun" viewBox="0 0 48 48"><g stroke="#FF891A" stroke-width="3" stroke-linecap="round"><path d="M24 3v7M24 38v7M3 24h7M38 24h7M9 9l5 5M34 34l5 5M39 9l-5 5M14 34l-5 5"/></g><circle cx="24" cy="24" r="10" fill="#FFF4C9" stroke="#AE132F" stroke-width="1.8"/><circle cx="20.5" cy="23" r="1.3" fill="#AE132F"/><circle cx="27.5" cy="23" r="1.3" fill="#AE132F"/><path d="M21 27.5q3 2.5 6 0" stroke="#AE132F" stroke-width="1.3" fill="none"/></symbol>
+</defs></svg>
 <div class="frise"></div>
-<div class="cloud" style="top:12vh;animation-delay:-10s" aria-hidden="true">☁️</div>
-<div class="cloud" style="top:38vh;animation-delay:-40s;font-size:3rem" aria-hidden="true">☁️</div>
+<div class="cloud" style="top:12vh;animation-delay:-10s" aria-hidden="true"><svg class="ic"><use href="#i-cloud"/></svg></div>
+<div class="cloud" style="top:38vh;animation-delay:-40s;font-size:3rem" aria-hidden="true"><svg class="ic"><use href="#i-cloud"/></svg></div>
 <main>
 <header>
-  <div class="moon" aria-hidden="true">🌙</div>
+  <div class="moon" aria-hidden="true"><svg class="ic"><use href="#i-moon"/></svg></div>
   <h1>Où poser sa couronne pour la nuit ?</h1>
   <p class="sub">Hôtels, maisons de village, camping et bulles étoilées, à Dormans et dans la vallée de la Marne. Touche un cœur pour garder tes rêves de côté.</p>
   <a class="back" href="index.html">Retour au royaume</a>
 </header>
+
+<section class="mapcard" aria-label="Carte des hébergements">
+  <svg class="map" id="map" viewBox="0 0 400 290" role="img" aria-label="Carte illustrée des hébergements autour de Dormans">
+    <rect width="400" height="290" rx="18" fill="#fff4c9"/>
+    <path d="M0 230C60 200 90 250 150 225S250 160 300 190 380 210 400 190V290H0z" fill="#bfe8b8" opacity=".55"/>
+    <path d="M-10 120C50 100 80 150 140 130S230 90 290 120 370 150 410 120" fill="none" stroke="#7ABEEF" stroke-width="12" stroke-linecap="round" opacity=".75"/>
+    <path d="M-10 120C50 100 80 150 140 130S230 90 290 120 370 150 410 120" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 8" stroke-linecap="round"/>
+    <use href="#i-flower" x="12" y="236" width="26" height="26"/><use href="#i-leaf" x="46" y="244" width="22" height="22"/><use href="#i-tulip" x="360" y="232" width="28" height="28"/><use href="#i-butterfly" x="296" y="20" width="30" height="30"/><use href="#i-flower" x="30" y="24" width="22" height="22"/><use href="#i-cloud" x="230" y="6" width="44" height="44"/>
+    <use href="#i-castle" x="130" y="102" width="40" height="40"/>
+    <text x="150" y="156" text-anchor="middle" font-family="UnifrakturCook,serif" font-size="20" fill="#AE132F">Dormans</text>
+    <text x="338" y="248" text-anchor="middle" font-family="UnifrakturCook,serif" font-size="18" fill="#AE132F">Épernay</text>
+    <g id="pins"></g>
+  </svg>
+  <div class="legend" aria-hidden="true"><span><i style="background:#FF76DD"></i>Hôtels</span><span><i style="background:#FF891A"></i>Maisons et gîtes</span><span><i style="background:#7ABEEF"></i>Camping et bulles</span></div>
+  <p id="mapinfo" aria-live="polite">Touche un point pour découvrir l'adresse.</p>
+  <div class="btns"><a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/h%C3%A9bergements+Dormans">Ouvrir Google Maps</a></div>
+  <p style="text-align:center;font-size:.9rem;margin:.3rem 0 0;opacity:.8">Carte illustrée : les lieux sont regroupés par zone, pas à l'échelle.</p>
+</section>
 
 <div class="chips" role="group" aria-label="Filtrer les hébergements">
   <button class="chip" data-f="all" aria-pressed="true">Tous</button>
@@ -97,36 +158,57 @@ footer{text-align:center;padding:0 1rem 2rem;font-style:italic;position:relative
 (function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var D=[
-["hotel","🏰","Hôtel Le Centre","Au village, 9 place du Luxembourg","Hôtel 2 étoiles avec bar, salon commun, terrasse et wifi, et des chambres familiales. Arrivée à partir de 16h30, départ avant 11h."],
-["hotel","🏰","Auberge Le Relais","Reuilly-Sauvigny, dans la vallée","Auberge 3 étoiles avec jardin, terrasse, restaurant, parking privé gratuit et chambres climatisées."],
-["hotel","🏰","Auberge de l'Omois","Baulne-en-Brie, dans la vallée","Auberge 2 étoiles avec terrasse, restaurant et bar. Chambres familiales et aire de jeux pour les enfants."],
-["hotel","🏰","Le Moulin Babet","Mézy-Moulins, dans la vallée","Une autre adresse de charme dans la vallée de la Marne. Les détails sont à vérifier auprès de l'établissement."],
-["hotel","🏰","Hôtel Margaux","Épernay, environ 25 km","Une valeur sûre pour un repli à Épernay, très bien noté en ligne (9,8 sur 10).","Hôtel Margaux Épernay"],
-["maison","🏡","La Belle Vie","Au village","Villa de charme classée 4 étoiles : 4 chambres pour 9 personnes, jardin et terrasse, gare à 400 m."],
-["maison","🏡","Maison AVA","Au village","Grande maison pour 10 personnes et 4 chambres. Commerces, gare et château à pied."],
-["maison","🏡","Le petit plaisir des caves","Au village, en plein centre","Appartement pour 6 personnes avec 3 chambres, au cœur de Dormans."],
-["maison","🏡","Gîte du Lavoir","Courthiézy","Gîte de village avec grande cuisine ouvrant sur une terrasse et chambres à l'étage."],
-["maison","🏡","Amandine","Verneuil, 3 km au nord de Dormans","Gîte de 60 m² pour 3 personnes, avec petite cour fermée et parking privé."],
-["maison","🏡","Chambres d'hôtes et champagne Douard","La Chapelle-Monthodon, 5,6 km de la gare","3 chambres pour jusqu'à 14 personnes, très bien notées (9 sur 10). Idéal pour un grand groupe."],
-["maison","🏡","Le Clos Verdonnais","Verdon","Maison de campagne avec jardin, animaux acceptés."],
-["camp","🫧","Les Bulles du Coq de Champagne","Dormans","Une bulle de 24 m² pour deux avec jacuzzi privé, terrasse et petit déjeuner inclus. Le plus romantique du lot."],
-["camp","⛺","Camping municipal Sous le Clocher","Au bord de la Marne, Dormans","93 emplacements dont 85 avec électricité, et 2 mobil-homes. Ouvert du 20 avril au 30 septembre selon les fiches en ligne. Animaux admis."],
-["camp","⛺","Camping d'Épernay","Épernay, 23 km","Une option de repli plus loin, avec voiture."]
+["hotel","i-castle","Hôtel Le Centre","Au village, 9 place du Luxembourg","Hôtel 2 étoiles avec bar, salon commun, terrasse et wifi, et des chambres familiales. Arrivée à partir de 16h30, départ avant 11h."],
+["hotel","i-castle","Auberge Le Relais","Reuilly-Sauvigny, dans la vallée","Auberge 3 étoiles avec jardin, terrasse, restaurant, parking privé gratuit et chambres climatisées."],
+["hotel","i-castle","Auberge de l'Omois","Baulne-en-Brie, dans la vallée","Auberge 2 étoiles avec terrasse, restaurant et bar. Chambres familiales et aire de jeux pour les enfants."],
+["hotel","i-castle","Le Moulin Babet","Mézy-Moulins, dans la vallée","Une autre adresse de charme dans la vallée de la Marne. Les détails sont à vérifier auprès de l'établissement."],
+["hotel","i-castle","Hôtel Margaux","Épernay, environ 25 km","Une valeur sûre pour un repli à Épernay, très bien noté en ligne (9,8 sur 10).","Hôtel Margaux Épernay"],
+["maison","i-house","La Belle Vie","Au village","Villa de charme classée 4 étoiles : 4 chambres pour 9 personnes, jardin et terrasse, gare à 400 m."],
+["maison","i-house","Maison AVA","Au village","Grande maison pour 10 personnes et 4 chambres. Commerces, gare et château à pied."],
+["maison","i-house","Le petit plaisir des caves","Au village, en plein centre","Appartement pour 6 personnes avec 3 chambres, au cœur de Dormans."],
+["maison","i-house","Gîte du Lavoir","Courthiézy","Gîte de village avec grande cuisine ouvrant sur une terrasse et chambres à l'étage."],
+["maison","i-house","Amandine","Verneuil, 3 km au nord de Dormans","Gîte de 60 m² pour 3 personnes, avec petite cour fermée et parking privé."],
+["maison","i-house","Chambres d'hôtes et champagne Douard","La Chapelle-Monthodon, 5,6 km de la gare","3 chambres pour jusqu'à 14 personnes, très bien notées (9 sur 10). Idéal pour un grand groupe."],
+["maison","i-house","Le Clos Verdonnais","Verdon","Maison de campagne avec jardin, animaux acceptés."],
+["camp","i-bubble","Les Bulles du Coq de Champagne","Dormans","Une bulle de 24 m² pour deux avec jacuzzi privé, terrasse et petit déjeuner inclus. Le plus romantique du lot."],
+["camp","i-tent","Camping municipal Sous le Clocher","Au bord de la Marne, Dormans","93 emplacements dont 85 avec électricité, et 2 mobil-homes. Ouvert du 20 avril au 30 septembre selon les fiches en ligne. Animaux admis."],
+["camp","i-tent","Camping d'Épernay","Épernay, 23 km","Une option de repli plus loin, avec voiture."]
 ];
 var list=document.getElementById('list'),wl=document.getElementById('wl'),favs=[];
 D.forEach(function(d){
   var c=document.createElement('article');c.className='card';c.dataset.t=d[0];
   var q=encodeURIComponent((d[5]||d[2]+' Dormans'));
-  c.innerHTML='<div class="top"><span class="ico" aria-hidden="true">'+d[1]+'</span><h3></h3><button class="heart" aria-pressed="false" aria-label="Garder dans ma liste de rêves">♡</button></div><span class="zone"></span><p></p><a class="go" target="_blank" rel="noopener" href="https://www.google.com/search?q='+q+'">Voir les détails sur le web</a>';
+  c.innerHTML='<div class="top"><span class="ico" aria-hidden="true"><svg class="ic"><use href="#'+d[1]+'"/></svg></span><h3></h3><button class="heart" aria-pressed="false" aria-label="Garder dans ma liste de rêves">♡</button></div><span class="zone"></span><p></p><div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?q='+q+'">Voir les détails sur le web</a></div>';
   c.querySelector('h3').textContent=d[2];c.querySelector('.zone').textContent=d[3];c.querySelector('p').textContent=d[4];
   var h=c.querySelector('.heart');
   h.addEventListener('click',function(e){
     var on=h.getAttribute('aria-pressed')!=='true';h.setAttribute('aria-pressed',on);h.textContent=on?'♥':'♡';
     var i=favs.indexOf(d[2]);if(on&&i<0)favs.push(d[2]);if(!on&&i>=0)favs.splice(i,1);
     wl.textContent=favs.length?favs.join(', '):"Aucun cœur pour l'instant.";
-    if(on){var r=h.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,10,['💖','✨','🌸'])}
+    if(on){var r=h.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,10,['i-heart','i-star','i-flower'])}
   });
   list.appendChild(c);
+});
+var cx=150,cy=145,pos=[],zc=[[],[],[]],col={hotel:'#FF76DD',maison:'#FF891A',camp:'#7ABEEF'};
+function zoneOf(d){var t=d[3];return t.indexOf('Épernay')>=0?2:(t.indexOf('Au village')===0||t==='Dormans'||t.indexOf('Au bord')===0)?0:1}
+D.forEach(function(d,i){zc[zoneOf(d)].push(i)});
+zc[0].forEach(function(i,k,a){var an=k/a.length*6.283+.5;pos[i]=[cx+Math.cos(an)*42,cy+Math.sin(an)*34]});
+zc[1].forEach(function(i,k,a){var an=(95+k*(255/Math.max(a.length-1,1)))*Math.PI/180;pos[i]=[cx+Math.cos(an)*108,cy+Math.sin(an)*98]});
+zc[2].forEach(function(i,k){pos[i]=[316+k*40,214-k*22]});
+var pg=document.getElementById('pins'),info=document.getElementById('mapinfo'),NS='http://www.w3.org/2000/svg';
+function goTo(i){
+  var c=list.children[i];if(c.hidden)document.querySelector('.chip[data-f="all"]').click();
+  info.textContent=D[i][2]+' : '+D[i][3];
+  c.scrollIntoView({behavior:rm?'auto':'smooth',block:'center'});c.classList.add('hl');setTimeout(function(){c.classList.remove('hl')},1800);
+  var r=c.getBoundingClientRect();burst(window.innerWidth/2,Math.max(r.top,60),8,['i-heart','i-star','i-flower']);
+}
+D.forEach(function(d,i){
+  var g=document.createElementNS(NS,'g');g.setAttribute('class','pin');g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',d[2]+', '+d[3]);
+  g.innerHTML='<circle cx="'+pos[i][0]+'" cy="'+pos[i][1]+'" r="14" fill="transparent"/><circle class="ring" cx="'+pos[i][0]+'" cy="'+pos[i][1]+'" r="8" fill="'+col[d[0]]+'" stroke="#AE132F" stroke-width="2"/><circle cx="'+(pos[i][0]-2)+'" cy="'+(pos[i][1]-2)+'" r="2" fill="#fff" opacity=".8"/>';
+  g.addEventListener('click',function(){goTo(i)});
+  g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();goTo(i)}});
+  g.addEventListener('mouseenter',function(){info.textContent=d[2]+' : '+d[3]});
+  pg.appendChild(g);
 });
 document.querySelectorAll('.chip').forEach(function(b){
   b.addEventListener('click',function(){
@@ -135,17 +217,20 @@ document.querySelectorAll('.chip').forEach(function(b){
   });
 });
 function burst(x,y,n,set){
-  if(rm)return;var E=set||['🌸','🌹','✿','✨','🌷'];
+  if(rm)return;var E=set||['i-flower','i-rose','i-petal','i-star','i-heart','i-leaf'];
   for(var i=0;i<n;i++){
-    var s=document.createElement('span');s.className='fx';s.textContent=E[Math.floor(Math.random()*E.length)];
+    var s=document.createElement('span');s.className='fx';
+    s.innerHTML='<svg><use href="#'+E[Math.floor(Math.random()*E.length)]+'"/></svg>';
     s.style.left=x+'px';s.style.top=y+'px';document.body.appendChild(s);
     var a=Math.random()*6.28,d=40+Math.random()*80,dx=Math.cos(a)*d,dy=Math.sin(a)*d+60;
     s.animate([{transform:'translate(-50%,-50%) scale(.4)',opacity:1},{transform:'translate(calc(-50% + '+dx+'px),calc(-50% + '+dy+'px)) rotate('+(Math.random()*360)+'deg) scale(1.1)',opacity:0}],{duration:1000+Math.random()*700,easing:'ease-out'}).onfinish=(function(el){return function(){el.remove()}})(s);
   }
 }
 document.addEventListener('pointerdown',function(e){burst(e.clientX,e.clientY,5)});
-if(!rm){for(var k=0;k<26;k++){var w=document.createElement('span');w.className='tw';w.textContent=['✦','✧','✨'][k%3];w.style.left=Math.random()*100+'vw';w.style.top=Math.random()*100+'vh';w.style.animationDelay=(Math.random()*4)+'s';w.style.fontSize=(10+Math.random()*12)+'px';document.body.appendChild(w);}}
+if(!rm){for(var k=0;k<26;k++){var w=document.createElement('span');w.className='tw';w.textContent=['✦','✧','✶'][k%3];w.style.left=Math.random()*100+'vw';w.style.top=Math.random()*100+'vh';w.style.animationDelay=(Math.random()*4)+'s';w.style.fontSize=(10+Math.random()*12)+'px';document.body.appendChild(w);}}
 })();
 </script>
+<nav class="menu" aria-label="Menu du site"><button id="menubtn" aria-expanded="false" aria-controls="menupanel" aria-label="Ouvrir le menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="#4a0f32" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg></button><ul id="menupanel" hidden><li><a href="index.html"><svg class="ic"><use href="#i-flower"/></svg>Accueil</a></li><li><a href="index.html#programme"><svg class="ic"><use href="#i-flower"/></svg>Le programme</a></li><li><a href="venir.html"><svg class="ic"><use href="#i-flower"/></svg>Comment venir</a></li><li><a href="hebergements.html" aria-current="page"><svg class="ic"><use href="#i-flower"/></svg>Où dormir</a></li><li><a href="index.html#banquet"><svg class="ic"><use href="#i-flower"/></svg>Le banquet</a></li><li><a href="index.html#cagnotte"><svg class="ic"><use href="#i-flower"/></svg>La cagnotte</a></li></ul></nav>
+<script>(function(){var b=document.getElementById("menubtn"),p=document.getElementById("menupanel");function t(o){p.hidden=!o;b.setAttribute("aria-expanded",o)}b.addEventListener("click",function(e){e.stopPropagation();t(p.hidden)});document.addEventListener("click",function(e){if(!p.hidden&&!p.contains(e.target))t(false)});document.addEventListener("keydown",function(e){if(e.key==="Escape")t(false)})})();</script>
 </body>
 </html>
